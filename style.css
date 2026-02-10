@@ -16,9 +16,10 @@ body {
   background-repeat: no-repeat;
 
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
+  padding-bottom: 12vh;
 }
 }
 
@@ -33,7 +34,7 @@ html[dir="rtl"] .lang-switch {
   color: #fff;
   font-weight: bold;
 }
-
+.hero-content p {
   margin: 20px 0;
   font-size: 1.2rem;
   color: #fff;
