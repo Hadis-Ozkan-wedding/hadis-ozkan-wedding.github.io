@@ -8,26 +8,18 @@
 body {
   background: #fafafa;
 }
-
 .hero {
   height: 100vh;
-  background: linear-gradient(120deg, #f6d365, #fda085);
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  color: #fff;
-}
-
-.hero-content p {
-  .lang-switch {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 html[dir="rtl"] .lang-switch {
