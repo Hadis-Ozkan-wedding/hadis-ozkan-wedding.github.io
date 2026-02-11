@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="Tr">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <title>Hadis & Ozkan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,19 +22,20 @@
   <div class="hero-content">
     <h1>Hadis & Ozkan</h1>
     <p>Hayatlarımızı birleştiriyoruz 🤍</p>
+
     <div class="countdown">
-  <div><span id="days"></span><br>Gün</div>
-  <div><span id="hours"></span><br>Saat</div>
-  <div><span id="minutes"></span><br>Dakika</div>
-  <div><span id="seconds"></span><br>Saniye</div>
-</div>
-    <div id="countdown"></div>
+      <div><span id="days"></span><br>Gün</div>
+      <div><span id="hours"></span><br>Saat</div>
+      <div><span id="minutes"></span><br>Dakika</div>
+      <div><span id="seconds"></span><br>Saniye</div>
+    </div>
+
     <a href="#date" class="btn">Tarihi Kaydet</a>
   </div>
 </section>
+
 <script>
   const weddingDate = new Date("2026-06-26T18:00:00").getTime();
-  const countdown = document.getElementById("countdown");
 
   setInterval(() => {
     const now = new Date().getTime();
@@ -41,12 +46,13 @@
     const minutes = Math.floor((distance / (1000 * 60)) % 60);
     const seconds = Math.floor((distance / 1000) % 60);
 
-    countdown.innerHTML =
-      days + " Gün " +
-      hours + " Saat " +
-      minutes + " Dakika " +
-      seconds + " Saniye ";
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
   }, 1000);
 </script>
+
 </body>
 </html>
