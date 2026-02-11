@@ -1,14 +1,17 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Hadis & Ozkan</title>
+  <title>حدیث & اوزکان</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- فونت لوکس -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Vazirmatn:wght@300;400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="lang-switch">
   <a href="index.html">🇮🇷 فارسی</a>
   <a href="tr.html">🇹🇷 Türkçe</a>
@@ -16,32 +19,40 @@
 
 <section class="hero">
   <div class="hero-content">
-    <div class="overlay"></div>
+    
     <h1>حدیث & اوزکان</h1>
-    <p class="subtitle">
-  <span></span>
-  <p>ما در حال ساختن یک زندگی مشترک هستیم 🤍</p>
-  <span></span>
-</p>
-  <div class="countdown">
-  <div>
-    <h2 id="days">135</h2>
-    <p>GÜN</p>
-  </div>
-  <div>
-    <h2 id="hours">04</h2>
-    <p>SAAT</p>
-  </div>
-  <div>
-    <h2 id="minutes">24</h2>
-    <p>DAKİKA</p>
-  </div>
-  <div>
-    <h2 id="seconds">34</h2>
-    <p>SANİYE</p>
-  </div>
-</div>
+    <p>ما در حال ساختن یک زندگی مشترک هستیم 🤍</p>
 
+    <!-- روزشمار افقی -->
+    <div class="countdown">
+      <div><span id="days"></span><br>روز</div>
+      <div><span id="hours"></span><br>ساعت</div>
+      <div><span id="minutes"></span><br>دقیقه</div>
+      <div><span id="seconds"></span><br>ثانیه</div>
+    </div>
+
+    <a href="#date" class="btn">ذخیره تاریخ</a>
+
+  </div>
+</section>
+
+<script>
+  const weddingDate = new Date("2026-06-26T18:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }, 1000);
 </script>
 
 </body>
