@@ -22,6 +22,12 @@ body {
   padding-bottom: 12vh;
 }
 }
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 72px;
+  color: white;
+  margin-bottom: 20px;
+}
 
 html[dir="rtl"] .lang-switch {
   right: auto;
@@ -34,6 +40,21 @@ html[dir="rtl"] .lang-switch {
   color: #fff;
   font-weight: bold;
 }
+.hero {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-content p {
   margin: 20px 0;
   font-size: 1.2rem;
@@ -70,5 +91,21 @@ html[dir="rtl"] .lang-switch {
   margin-top: 25px;
   font-size: 1.1rem;
   opacity: 0.9;
+}
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.subtitle span {
+  width: 60px;
+  height: 1px;
+  background: white;
 }
 
