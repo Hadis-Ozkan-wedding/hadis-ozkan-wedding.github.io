@@ -1,45 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
-}
-
-body {
-  background: #fafafa;
-}
-.hero {
-  height: 100vh;
-  background-image: url("images/hero.jpg");
-  background-size: cover;
-  background-position: 50% 30%;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 12vh;
-}
-}
-.names {
-  font-family: 'Great Vibes', cursive;
-  font-size: 72px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-html[dir="rtl"] .lang-switch {
-  right: auto;
-  left: 20px;
-}
-
 .lang-switch a {
   margin-left: 10px;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
 }
+
 .hero {
   position: relative;
 }
@@ -55,17 +20,38 @@ html[dir="rtl"] .lang-switch {
   z-index: 2;
 }
 
-.hero-content p {
-  margin: 20px 0;
-  font-size: 1.2rem;
-  color: #fff;
-}
 .hero-content h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 5rem;
   color: #fff;
   margin-bottom: 20px;
 }
+
+.hero-content p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  text-align: center;
+  color: #fff;
+}
+
+.countdown span {
+  font-size: 2rem;
+  font-weight: 600;
+  display: block;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -80,31 +66,6 @@ html[dir="rtl"] .lang-switch {
 .btn:hover {
   background: #333;
   color: #fff;
-}
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-}
-}
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-.countdown h2 {
-  font-size: 36px;
-  font-weight: 600;
-}
-
-.countdown p {
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-.countdown div {
-  text-align: center;
 }
 
 button {
@@ -122,7 +83,6 @@ button:hover {
   background: #f3f3f3;
 }
 
-}
 .subtitle {
   font-family: 'Playfair Display', serif;
   font-size: 18px;
@@ -140,3 +100,8 @@ button:hover {
   background: white;
 }
 
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+}
