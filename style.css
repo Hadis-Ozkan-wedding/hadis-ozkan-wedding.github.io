@@ -40,14 +40,11 @@ html[dir="rtl"] .lang-switch {
   color: #fff;
 }
 .hero-content h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 9rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;  /* کوچیک‌تر از قبل */
   color: #fff;
   margin-bottom: 20px;
 }
-
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -65,7 +62,7 @@ html[dir="rtl"] .lang-switch {
 }
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 4.2rem;
-    letter-spacing: 0.06em;
+    font-size: 3rem;
   }
 }
+
