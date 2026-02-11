@@ -87,10 +87,37 @@ html[dir="rtl"] .lang-switch {
   }
 }
 }
-#countdown {
-  margin-top: 25px;
-  font-size: 1.1rem;
-  opacity: 0.9;
+.countdown {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.countdown h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.countdown p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+button {
+  padding: 12px 35px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #f3f3f3;
+}
+
 }
 .subtitle {
   font-family: 'Playfair Display', serif;
