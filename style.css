@@ -26,6 +26,10 @@
   color: #fff;
   margin-bottom: 20px;
 }
+html[dir="rtl"] .hero-content h1 {
+  font-family: 'Lateef', serif;
+  font-size: 5.5rem;
+}
 
 .hero-content p {
   margin: 20px 0;
