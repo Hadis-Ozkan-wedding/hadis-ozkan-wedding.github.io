@@ -1,7 +1,3 @@
-body {
-  background: yellow !important;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -279,14 +275,16 @@ html[dir="rtl"] .lang-switch {
 
 /* پوستر فارسی */
 .fa-poster {
-  background-color: red;
+
+  background-image: url("images/Poster-fa.jpg");
+
 }
 
 
 
 /* پوستر ترکی */
 .tr-poster {
-  background-image: url("Images/Poster-tr.jpg");
+  background-image: url("images/Poster-tr.jpg");
 }
 
 .invitation-overlay {
