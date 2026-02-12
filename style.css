@@ -1,3 +1,7 @@
+body {
+  background: yellow !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
