@@ -232,4 +232,30 @@ html[lang="fa"] .hero-content h1 {
     font-size: 11px;
   }
 }
+/* ================= LANGUAGE SWITCH ================= */
+
+.lang-switch {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  z-index: 2000; /* بالاتر از navbar */
+}
+
+html[dir="rtl"] .lang-switch {
+  right: auto;
+  left: 40px;
+}
+
+.lang-switch a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.lang-switch a:hover {
+  opacity: 0.7;
+}
 
