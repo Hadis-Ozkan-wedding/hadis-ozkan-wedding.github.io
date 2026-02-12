@@ -263,4 +263,29 @@ html[dir="rtl"] .lang-switch {
 .lang-item a:hover {
   opacity: 1;
 }
+/* ================= INVITATION SECTION ================= */
+
+.invitation-section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* پوستر فارسی */
+.fa-poster {
+  background-image: url("Images/poster-fa.jpg");
+}
+
+/* پوستر ترکی */
+.tr-poster {
+  background-image: url("Images/poster-tr.jpg");
+}
+
+.invitation-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.1);
+}
 
