@@ -201,7 +201,7 @@ html[lang="fa"] .hero-content h1 {
   flex-direction: row; /* این باعث افقی شدن میشه */
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 28px;
   padding: 0;
   margin: 0;
 }
@@ -214,12 +214,19 @@ html[lang="fa"] .hero-content h1 {
   text-decoration: none;
   color: white;
   font-size: 13px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 500;
   transition: 0.3s ease;
   position: relative;
 }
+
+/* کوچکتر برای ترکی که کلمات طولانی‌ترن */
+html[lang="tr"] .navbar a {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
 
 /* افکت خط زیر هنگام هاور */
 .navbar a::after {
