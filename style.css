@@ -34,44 +34,6 @@ html {
 /* LANGUAGE SWITCH */
 /* ================= LANGUAGE SWITCH ================= */
 
-.lang-switch {
-  position: fixed;
-  top: 25px; /* پایین‌تر از navbar */
-  right: 40px;
-  z-index: 3000;
-}
-
-html[dir="rtl"] .lang-switch {
-  right: auto;
-  left: 40px;
-}
-
-.lang-switch a {
-  margin-left: 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 13px;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.lang-switch a:hover {
-  opacity: 0.7;
-}
-
-
-html[dir="rtl"] .lang-switch {
-  right: auto;
-  left: 30px;
-}
-
-.lang-switch a {
-  margin-left: 10px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-}
 
 /* CONTENT */
 .hero-content {
@@ -285,5 +247,20 @@ html[dir="rtl"] .lang-switch {
 
 .lang-switch a:hover {
   opacity: 0.7;
+}
+/* language inside navbar */
+
+.lang-item {
+  margin-left: 30px;
+  font-size: 12px;
+}
+
+.lang-item a {
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.lang-item a:hover {
+  opacity: 1;
 }
 
