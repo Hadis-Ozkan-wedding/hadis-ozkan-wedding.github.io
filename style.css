@@ -275,12 +275,12 @@ html[dir="rtl"] .lang-switch {
 
 /* پوستر فارسی */
 .fa-poster {
-  background-image: url("Images/poster-fa.jpg");
+  background-image: url("Images/Poster-fa.jpg");
 }
 
 /* پوستر ترکی */
 .tr-poster {
-  background-image: url("Images/poster-tr.jpg");
+  background-image: url("Images/Poster-tr.jpg");
 }
 
 .invitation-overlay {
