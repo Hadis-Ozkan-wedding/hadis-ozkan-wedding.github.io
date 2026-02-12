@@ -275,8 +275,10 @@ html[dir="rtl"] .lang-switch {
 
 /* پوستر فارسی */
 .fa-poster {
-  background-image: url("Images/Poster-fa.jpg");
+  background-color: red;
 }
+
+
 
 /* پوستر ترکی */
 .tr-poster {
