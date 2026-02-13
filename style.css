@@ -144,6 +144,13 @@ html[lang="fa"] .hero-content h1 {
   .countdown span {
     font-size: 1.8rem;
   }
+    .invitation-section {
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #000;
+  }
+
 }
 /* ================= NAVBAR ================= */
 
