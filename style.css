@@ -372,18 +372,9 @@ html[dir="rtl"] .lang-switch {
     width: 120px;
     height: 120px;
   }
-}
-/* فاصله بیشتر برای صفحه ترکی در حالت افقی */
-html[lang="tr"] .couple-section {
-  margin-top: 120px; /* میتونی عدد رو کم و زیاد کنی تا درست بشه */
-}
 
-/* موبایل: فاصله کمتر */
-@media (max-width: 768px) {
-  html[lang="tr"] .couple-section {
-    margin-top: 80px;
-  }
-}
+
+  
 /* ================= COUPLE SECTION ================= */
 .couple-section {
   position: relative;
