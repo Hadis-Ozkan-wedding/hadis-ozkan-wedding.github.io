@@ -384,3 +384,85 @@ html[lang="tr"] .couple-section {
     margin-top: 80px;
   }
 }
+/* ================= COUPLE SECTION ================= */
+.couple-section {
+  position: relative;
+  padding: 100px 20px; /* فاصله بالا و پایین */
+  background-image: url("images/couple-bg.jpg"); /* عکس بک‌گراند بعداً اضافه می‌کنیم */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; /* فاصله بین h2 و کارت‌ها */
+  z-index: 1;
+}
+
+/* عنوان بخش */
+.couple-section .section-title {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif; /* بعداً می‌تونی فونت دست‌نویس انگلیسی بذاری */
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* کارت‌ها */
+.couple-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* فاصله بین دو کارت */
+  flex-wrap: wrap;
+}
+
+.couple-card {
+  background: rgba(255, 255, 255, 0.15); /* رنگ شفاف کارت روی بک‌گراند */
+  backdrop-filter: blur(10px); /* تار شدن پشت کارت */
+  padding: 30px;
+  border-radius: 20px; /* گرد شدن گوشه‌ها */
+  max-width: 300px; /* می‌تونی بزرگ‌تر کنی */
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.couple-card:hover {
+  transform: translateY(-10px);
+}
+
+/* عکس‌ها */
+.couple-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0; /* گرد شدن بالای عکس‌ها */
+  margin-bottom: 15px;
+}
+
+/* نام و متن */
+.couple-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive; /* بعداً می‌تونی فونت دست‌نویس بذاری */
+}
+
+.couple-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .couple-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .couple-card {
+    max-width: 90%;
+  }
+
+  .couple-section .section-title {
+    font-size: 2.5rem;
+  }
+}
