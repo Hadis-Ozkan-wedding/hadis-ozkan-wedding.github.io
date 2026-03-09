@@ -299,3 +299,77 @@ html[dir="rtl"] .lang-switch {
   background: rgba(0,0,0,0.1);
 }
 
+/* بخش عروس و داماد */
+.couple-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fff; /* می‌توانید رنگ پس‌زمینه تغییر دهید */
+}
+
+.couple-section .section-title {
+  font-family: 'Great Vibes', cursive; /* فونت دست‌نویس برای عنوان */
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #e07a7a; /* رنگ صورتی ملایم */
+}
+
+/* کانتینر کارت ها */
+.couple-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* کارت هر نفر */
+.couple-card {
+  background: #fff;
+  border: 2px solid #eee; /* کادر دور عکس و متن */
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 280px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* عکس دایره ای */
+.couple-card .couple-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #e07a7a; /* حاشیه دور عکس */
+}
+
+/* اسم */
+.couple-card .couple-name {
+  font-family: 'Dancing Script', cursive; /* فونت دست‌نویس انگلیسی */
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* متن کوتاه زیر عکس */
+.couple-card .couple-text {
+  font-family: 'Playfair Display', serif; /* متن قابل خواندن */
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .couple-container {
+    gap: 30px;
+  }
+
+  .couple-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .couple-card .couple-img {
+    width: 120px;
+    height: 120px;
+  }
+}
