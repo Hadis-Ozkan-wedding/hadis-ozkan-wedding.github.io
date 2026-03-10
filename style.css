@@ -281,6 +281,7 @@ html[dir="rtl"] .lang-switch {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 /* پوستر فارسی */
@@ -389,7 +390,7 @@ html[dir="rtl"] .lang-switch {
   flex-direction: column;
   align-items: center;
   gap: 50px; /* فاصله بین h2 و کارت‌ها */
-  z-index: 1;
+
 }
 
 /* عنوان بخش */
