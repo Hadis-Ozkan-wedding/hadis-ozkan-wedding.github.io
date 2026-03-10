@@ -276,8 +276,6 @@ html[dir="rtl"] .lang-switch {
 .invitation-section {
   position: relative;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
