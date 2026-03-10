@@ -383,6 +383,7 @@ html[dir="rtl"] .lang-switch {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: transparent; /* از سفید شدن جلوگیری می‌کنه */
   display: flex;
   flex-direction: column;
   align-items: center;
