@@ -374,50 +374,45 @@ html[dir="rtl"] .lang-switch {
     height: 120px;
   }
 
-
-  
-
 /* ================= COUPLE SECTION ================= */
 .couple-section {
   position: relative;
-  padding: 120px 20px; /* فاصله بالا و پایین */
-  background-image: url("images/couple-bg.jpg"); /* عکس بک‌گراند */
-  background-size: cover;   /* پوشش کامل */
-  background-position: center center;
+  padding: 100px 20px;
+  text-align: center;
+  background-image: url("images/couple-bg.jpg"); /* بک‌گراند */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px; /* فاصله بین عنوان و کارت‌ها */
+  gap: 50px; /* فاصله بین h2 و کارت‌ها */
   z-index: 1;
 }
 
 /* عنوان بخش */
 .couple-section .section-title {
-  font-size: 3rem;
   font-family: 'Great Vibes', cursive; /* فونت دست‌نویس */
+  font-size: 3rem;
   color: #fff;
-  margin-bottom: 40px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5); /* کمی سایه برای خوانایی */
-  text-align: center;
+  margin-bottom: 50px;
 }
 
-/* کانتینر کارت‌ها */
+/* کانتینر کارت ها */
 .couple-container {
   display: flex;
   justify-content: center;
-  gap: 50px; /* فاصله بین کارت‌ها */
+  gap: 60px; /* فاصله کارت‌ها کنار هم */
   flex-wrap: wrap;
 }
 
 /* کارت هر نفر */
 .couple-card {
-  background: rgba(255, 255, 255, 0.15); /* شفاف برای بک‌گراند */
+  background: rgba(255, 255, 255, 0.15); /* کارت شفاف روی بک‌گراند */
   backdrop-filter: blur(10px); /* تار شدن پشت کارت */
-  padding: 30px 20px;
+  padding: 30px;
   border-radius: 20px;
-  max-width: 300px; /* می‌تونی بزرگ‌تر کنی */
-  width: 100%;
+  max-width: 300px;
   text-align: center;
   color: #fff;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
@@ -432,37 +427,25 @@ html[dir="rtl"] .lang-switch {
 .couple-img {
   width: 100%;
   height: auto;
-  border-radius: 20px 20px 0 0; /* گرد شدن بالای عکس */
+  border-radius: 20px 20px 0 0;
   margin-bottom: 15px;
-  object-fit: cover;
-  border: 3px solid rgba(255,255,255,0.6); /* حاشیه نرم */
 }
 
-/* اسم و متن */
+/* نام و متن */
 .couple-name {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  font-family: 'Dancing Script', cursive; /* فونت دست‌نویس انگلیسی */
+  font-family: 'Dancing Script', cursive;
 }
 
 .couple-text {
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Playfair Display', serif;
-  color: #fff;
 }
 
+/* =============== MEDIA QUERIES =============== */
 /* موبایل */
 @media (max-width: 768px) {
-  .couple-section {
-    padding: 80px 15px;
-    gap: 40px;
-  }
-
-  .couple-section .section-title {
-    font-size: 2.5rem;
-  }
-
   .couple-container {
     flex-direction: column;
     gap: 30px;
@@ -470,11 +453,26 @@ html[dir="rtl"] .lang-switch {
 
   .couple-card {
     max-width: 90%;
-    padding: 20px 15px;
+    padding: 20px;
   }
 
-  .couple-img {
-    border-radius: 20px;
-    height: auto;
+  .couple-section .section-title {
+    font-size: 2.5rem;
   }
 }
+
+/* حالت افقی بزرگ (landscape) یا صفحه خیلی پهن */
+@media (min-width: 1200px) and (orientation: landscape) {
+  .couple-container {
+    flex-direction: column; /* کارت‌ها زیر هم */
+    gap: 50px;
+    align-items: center;
+  }
+
+  .couple-card {
+    max-width: 350px;
+    width: 90%;
+  }
+}
+  
+
