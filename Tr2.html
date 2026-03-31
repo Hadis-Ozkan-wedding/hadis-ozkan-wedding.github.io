@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hadis & Ozkan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="#home">Ana Sayfa</a></li>
+    <li><a href="#invitation">Davetiye</a></li>
+    <li><a href="#couple">Gelin ve Damat</a></li>
+    <li><a href="#story">Aşk Hikayesi</a></li>
+    <li><a href="#greetings">Mesajlar</a></li>
+    <li><a href="#whenwhere">Zaman ve Mekan</a></li>
+    <li><a href="#rsvp">Anket</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+
+    <!-- language switch -->
+    <li class="lang-item">
+      <a href="index.html">FA</a> |
+      <a href="tr.html">TR</a>
+    </li>
+  </ul>
+</nav>
+
+
+<section class="hero" id="home">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Hadis & Ozkan</h1>
+    <p>Hayatlarımızı birleştiriyoruz 🤍</p>
+
+    <div class="countdown">
+      <div data-label="Gün"><span id="days"></span></div>
+      <div data-label="Saat"><span id="hours"></span></div>
+      <div data-label="Dakika"><span id="minutes"></span></div>
+      <div data-label="Saniye"><span id="seconds"></span></div>
+    </div>
+
+    <a href="#date" class="btn">Tarihi Kaydet</a>
+  </div>
+</section>
+<section id="invitation" class="invitation-section tr-poster">
+  <div class="invitation-overlay"></div>
+</section>
+
+<script>
+  const weddingDate = new Date("2026-06-26T18:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+  }, 1000);
+</script>
+<section id="couple" class="couple-section">
+  <h2 class="section-title">Gelin & Damat</h2>
+  
+  <div class="couple-container">
+    <div class="couple-card">
+      <img src="images/bride.jpg" alt="Gelin" class="couple-img">
+      <h3 class="couple-name">Hadis</h3>
+      <p class="couple-text">Bu kısa metin gelin hakkında. Bilgi veya kısa bir aşk cümlesi ekleyebilirsiniz.</p>
+    </div>
+
+    <div class="couple-card">
+      <img src="images/groom.jpg" alt="Damat" class="couple-img">
+      <h3 class="couple-name">Ozkan</h3>
+      <p class="couple-text">Bu kısa metin damat hakkında. Bilgi veya kısa bir aşk cümlesi ekleyebilirsiniz.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
