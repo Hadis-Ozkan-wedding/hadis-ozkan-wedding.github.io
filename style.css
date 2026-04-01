@@ -578,3 +578,41 @@ html[dir="rtl"] .lang-switch {
     left: 12px !important;
   }
 }
+/* ================= FIX FOR TURKISH LAYOUT ================= */
+
+/* جلوگیری از فضای خالی سمت راست */
+html, body {
+  overflow-x: hidden;
+}
+
+/* مخصوص نسخه ترکی */
+html[lang="tr"] .timeline {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* خط تایم‌لاین بیاد سمت چپ */
+html[lang="tr"] .timeline::before {
+  left: 20px;
+  transform: none;
+}
+
+/* هر آیتم کل عرض رو بگیره */
+html[lang="tr"] .timeline-item {
+  width: 100%;
+  left: 0 !important;
+  padding-left: 60px;
+  text-align: left !important;
+}
+
+/* حذف حالت چپ و راست شدن */
+html[lang="tr"] .timeline-item:nth-child(even),
+html[lang="tr"] .timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+/* دایره‌ها کنار خط */
+html[lang="tr"] .timeline-item::before {
+  left: 12px !important;
+  right: auto !important;
+}
