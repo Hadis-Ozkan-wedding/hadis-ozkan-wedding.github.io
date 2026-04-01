@@ -115,10 +115,64 @@
         <p>Her şeyin ciddileştiği o özel an...</p>
       </div>
     </div>
-
-  </div>
     </section>
-  </div>
+
+.greetings-section {
+  padding: 100px 0;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 60s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.message-card {
+  min-width: 220px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.message-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.message-card h4 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.message-card p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+</div>
 </section>
 </body>
 </html>
