@@ -652,6 +652,10 @@ html[lang="fa"] .timeline-item::before {
   overflow: hidden;
 }
 
+.greetings-section.rtl {
+  direction: rtl; /* برای متن فارسی راست به چپ */
+}
+
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -696,7 +700,8 @@ html[lang="fa"] .timeline-item::before {
   color: #666;
 }
 
+/* اصلاح انیمیشن برای حرکت بی‌نهایت */
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* قبلاً -50% بود */
 }
