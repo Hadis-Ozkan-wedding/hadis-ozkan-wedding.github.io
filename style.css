@@ -616,3 +616,31 @@ html[lang="tr"] .timeline-item::before {
   left: 12px !important;
   right: auto !important;
 }
+/* ================= FIX FOR PERSIAN TIMELINE ================= */
+
+html[lang="fa"] .timeline::before {
+  right: 20px;
+  left: auto;
+  transform: none;
+}
+
+html[lang="fa"] .timeline-item {
+  width: 100%;
+  right: 0;
+  left: auto;
+  padding-right: 60px;
+  text-align: right;
+}
+
+/* حذف حالت زیگ‌زاگ */
+html[lang="fa"] .timeline-item:nth-child(even),
+html[lang="fa"] .timeline-item:nth-child(odd) {
+  left: auto;
+  right: 0;
+}
+
+/* دایره‌ها کنار خط سمت راست */
+html[lang="fa"] .timeline-item::before {
+  right: 12px !important;
+  left: auto !important;
+}
