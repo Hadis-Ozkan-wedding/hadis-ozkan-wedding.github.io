@@ -653,7 +653,11 @@ html[lang="fa"] .timeline-item::before {
 }
 
 .greetings-section.rtl {
-  direction: rtl; /* برای متن فارسی راست به چپ */
+  direction: rtl; /* متن راست‌چین بمونه */
+}
+
+.marquee-track {
+  direction: ltr; /* خیلی مهم! حرکت درست بشه */
 }
 
 .marquee {
