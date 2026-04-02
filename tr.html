@@ -143,33 +143,35 @@
       <div class="message-card"><img src="images/friend18.jpg"><h4>مانی</h4><p>شاد و خوشبخت 🥰</p></div>
       <div class="message-card"><img src="images/friend19.jpg"><h4>فاطمه</h4><p>عشق و شادی 🌷</p></div>
       <div class="message-card"><img src="images/friend20.jpg"><h4>سینا</h4><p>به امید روزهای زیبا 💕</p></div>
-
-      <!-- دوباره برای اسکرول بی‌نهایت -->
-      <div class="message-card"><img src="images/friend1.jpg"><h4>سارا</h4><p>بهترین‌ها براتون 💕</p></div>
-      <div class="message-card"><img src="images/friend2.jpg"><h4>علی</h4><p>خیلی خوشحال شدم ❤️</p></div>
-      <div class="message-card"><img src="images/friend3.jpg"><h4>مینا</h4><p>عاشق شما هستم 😍</p></div>
-      <div class="message-card"><img src="images/friend4.jpg"><h4>نرگس</h4><p>تبریک‌های گرم 💖</p></div>
-      <div class="message-card"><img src="images/friend5.jpg"><h4>محمد</h4><p>شاد و خوشبخت باشید 🌸</p></div>
-      <div class="message-card"><img src="images/friend6.jpg"><h4>زهرا</h4><p>همیشه موفق باشید 💫</p></div>
-      <div class="message-card"><img src="images/friend7.jpg"><h4>امیر</h4><p>خوشحال شدم براتون 🥰</p></div>
-      <div class="message-card"><img src="images/friend8.jpg"><h4>لیلا</h4><p>بهترین‌ها همیشه 🌷</p></div>
-      <div class="message-card"><img src="images/friend9.jpg"><h4>رضا</h4><p>عشق و شادی 😘</p></div>
-      <div class="message-card"><img src="images/friend10.jpg"><h4>مریم</h4><p>به امید روزهای زیبا 💕</p></div>
-      <div class="message-card"><img src="images/friend11.jpg"><h4>هانا</h4><p>شاد و سلامت 🌸</p></div>
-      <div class="message-card"><img src="images/friend12.jpg"><h4>رامین</h4><p>همیشه خوشحال باشید ❤️</p></div>
-      <div class="message-card"><img src="images/friend13.jpg"><h4>نازنین</h4><p>روزهای پر از عشق 💖</p></div>
-      <div class="message-card"><img src="images/friend14.jpg"><h4>آرمان</h4><p>شاد و پیروز 🌟</p></div>
-      <div class="message-card"><img src="images/friend15.jpg"><h4>نگین</h4><p>بهترین‌ها همیشه 💕</p></div>
-      <div class="message-card"><img src="images/friend16.jpg"><h4>سام</h4><p>شاد و سلامت 🌸</p></div>
-      <div class="message-card"><img src="images/friend17.jpg"><h4>الهام</h4><p>همیشه موفق باشید 💫</p></div>
-      <div class="message-card"><img src="images/friend18.jpg"><h4>مانی</h4><p>شاد و خوشبخت 🥰</p></div>
-      <div class="message-card"><img src="images/friend19.jpg"><h4>فاطمه</h4><p>عشق و شادی 🌷</p></div>
-      <div class="message-card"><img src="images/friend20.jpg"><h4>سینا</h4><p>به امید روزهای زیبا 💕</p></div>
-
-    </div>
+   </div>
   </div>
 </section>
 </div>
 </section>
+  <script>
+document.querySelectorAll('.marquee').forEach(marquee => {
+  const track = marquee.querySelector('.marquee-track');
+  const cards = Array.from(track.children);
+
+  // کپی کارت‌ها برای حرکت بی‌نهایت
+  track.innerHTML += track.innerHTML;
+
+  let speed = 1; // سرعت پیکسل بر frame
+  let offset = 0;
+
+  function animate() {
+    offset += speed;
+    if (offset >= track.scrollWidth / 2) offset = 0;
+    track.style.transform = `translateX(-${offset}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // توقف هنگام هاور
+  marquee.addEventListener('mouseenter', () => speed = 0);
+  marquee.addEventListener('mouseleave', () => speed = 1);
+});
+  </script>
 </body>
 </html>
