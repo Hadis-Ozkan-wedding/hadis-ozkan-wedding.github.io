@@ -661,13 +661,9 @@ html[lang="fa"] .timeline-item::before {
 .marquee-track {
   display: flex;
   gap: 30px;
-  width: max-content;
+  flex-wrap: nowrap;
 }
 
-.marquee:hover .marquee-track {
-  cursor: pointer;
-}
-  
 .message-card {
   min-width: 220px;
   background: #fff;
@@ -693,15 +689,4 @@ html[lang="fa"] .timeline-item::before {
 .message-card p {
   font-size: 0.85rem;
   color: #666;
-}
-
-.message-card p {
-  font-size: 0.85rem;
-  color: #666;
-}
-
-/* اصلاح انیمیشن برای حرکت بی‌نهایت */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }
