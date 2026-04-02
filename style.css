@@ -690,3 +690,73 @@ html[lang="fa"] .timeline-item::before {
   font-size: 0.85rem;
   color: #666;
 }
+
+
+.when-where-section {
+    padding: 80px 20px;
+    background-color: #f9f9f9; /* فعلاً ساده، بعداً می‌توانید عکس بگذارید */
+    text-align: center;
+}
+
+.section-title-alt {
+    font-family: 'cursive', sans-serif; /* اگر فونت خاصی دارید اینجا ست کنید */
+    font-size: 3rem;
+    color: #f19a9a;
+    margin-bottom: 50px;
+}
+
+.events-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* برای اینکه در موبایل زیر هم بیفتند */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 5px; /* طبق عکس لبه‌ها خیلی گرد نیستند */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+.event-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.event-card p {
+    margin-bottom: 8px;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.map-btn {
+    margin-top: auto;
+    padding: 10px 20px;
+    border: 1px solid #f19a9a;
+    color: #f19a9a;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background: #f19a9a;
+    color: #fff;
+}
