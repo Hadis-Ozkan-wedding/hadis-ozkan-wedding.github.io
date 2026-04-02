@@ -146,36 +146,44 @@
       <div class="message-card"><img src="images/friend20.jpg"><h4>سینا</h4><p>به امید روزهای زیبا 💕</p></div>
 
     </div>
-  </div>
+  </div>    
 </section>
-    
-</section>
-  
+
   
 <script>
-document.querySelectorAll('.marquee').forEach(marquee => {
-  const track = marquee.querySelector('.marquee-track');
-  const cards = Array.from(track.children);
+  // این کد مخصوص حرکت دادن نوار پیام‌هاست
+  document.querySelectorAll('.marquee').forEach(function(marquee) {
+    var track = marquee.querySelector('.marquee-track');
+    
+    // تکرار محتوا برای اینکه حرکت بی‌پایان به نظر برسد
+    track.innerHTML += track.innerHTML;
 
-  // کپی کارت‌ها برای حرکت بی‌نهایت
-  track.innerHTML += track.innerHTML;
+    var speed = 1; 
+    var offset = 0;
+    
+    // چک کردن اینکه آیا صفحه فارسی (راست‌چین) است یا نه
+    var isRTL = document.documentElement.dir === 'rtl' || getComputedStyle(document.body).direction === 'rtl';
 
-  let speed = 1; // سرعت پیکسل بر frame
-  let offset = 0;
+    function animate() {
+      offset += speed;
+      
+      if (offset >= track.scrollWidth / 2) {
+        offset = 0;
+      }
+      
+      // اگر فارسی بود عدد مثبت و اگر ترکی بود عدد منفی استفاده می‌شود
+      var moveValue = isRTL ? offset : -offset;
+      track.style.transform = 'translateX(' + moveValue + 'px)';
+      
+      requestAnimationFrame(animate);
+    }
 
-  function animate() {
-    offset += speed;
-    if (offset >= track.scrollWidth / 2) offset = 0;
-    track.style.transform = `translateX(-${offset}px)`;
-    requestAnimationFrame(animate);
-  }
+    animate();
 
-  animate();
-
-  // توقف هنگام هاور
-  marquee.addEventListener('mouseenter', () => speed = 0);
-  marquee.addEventListener('mouseleave', () => speed = 1);
-});
+    // توقف حرکت وقتی موس روی پیام‌ها می‌رود
+    marquee.addEventListener('mouseenter', function() { speed = 0; });
+    marquee.addEventListener('mouseleave', function() { speed = 1; });
+  });
 </script>
 </body>
 </html>
