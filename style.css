@@ -652,12 +652,12 @@ html[lang="fa"] .timeline-item::before {
   overflow: hidden;
 }
 
-.greetings-section.rtl {
-  direction: rtl; /* متن راست‌چین بمونه */
-}
-
 .marquee-track {
-  direction: ltr; /* خیلی مهم! حرکت درست بشه */
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  direction: ltr; /* خیلی مهم */
 }
 
 .marquee {
@@ -707,5 +707,5 @@ html[lang="fa"] .timeline-item::before {
 /* اصلاح انیمیشن برای حرکت بی‌نهایت */
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* قبلاً -50% بود */
+  100% { transform: translateX(-50%); }
 }
