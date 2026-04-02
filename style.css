@@ -652,14 +652,6 @@ html[lang="fa"] .timeline-item::before {
   overflow: hidden;
 }
 
-.marquee-track {
-  display: flex;
-  gap: 30px;
-  width: max-content;
-  animation: scroll 40s linear infinite;
-  direction: ltr; /* خیلی مهم */
-}
-
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -670,13 +662,12 @@ html[lang="fa"] .timeline-item::before {
   display: flex;
   gap: 30px;
   width: max-content;
-  animation: scroll 60s linear infinite;
 }
 
 .marquee:hover .marquee-track {
-  animation-play-state: paused;
+  cursor: pointer;
 }
-
+  
 .message-card {
   min-width: 220px;
   background: #fff;
@@ -697,6 +688,11 @@ html[lang="fa"] .timeline-item::before {
 .message-card h4 {
   margin-bottom: 5px;
   font-size: 1rem;
+}
+
+.message-card p {
+  font-size: 0.85rem;
+  color: #666;
 }
 
 .message-card p {
