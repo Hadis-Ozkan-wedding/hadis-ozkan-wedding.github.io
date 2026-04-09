@@ -221,6 +221,64 @@
         </div>
     </div>
 </section>
+  <section id="rsvp" class="rsvp-section">
+    <div class="rsvp-container">
+        <h2 class="section-title-alt">پرسشنامه</h2>
+        <p class="rsvp-deadline">اگر قصد آمدن دارید، لطفاً تا روز اول ژوئن این فرم را پر کنید.</p>
+
+        <form action="https://formspree.io/f/mjgpdoeb" method="POST" class="rsvp-form">
+            
+            <div class="form-group">
+                <label>نام و نام خانوادگی</label>
+                <input type="text" name="name" required placeholder="نام خود را وارد کنید">
+            </div>
+
+            <div class="form-group">
+                <label>تعداد مهمان‌ها</label>
+                <input type="number" name="guests" min="1" max="10" required>
+                <small class="form-help">لطفاً تعداد دقیق افرادی که با شما می‌آیند (با احتساب خودتان) را وارد کنید.</small>
+            </div>
+
+            <div class="form-group">
+                <label>شماره تماس</label>
+                <input type="tel" name="phone" required placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+            </div>
+
+            <div class="form-group">
+                <label>نوشیدنی مورد علاقه شما</label>
+                <select name="drink" required>
+                    <option value="" disabled selected>انتخاب کنید...</option>
+                    <option value="شراب سفید">شراب سفید</option>
+                    <option value="شراب قرمز">شراب قرمز</option>
+                    <option value="جین">جین</option>
+                    <option value="راکی">راکی</option>
+                </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="shuttle"> نیاز به سرویس (شاتل) دارم
+                </label>
+                <small class="form-help">اگر می‌خواهید با سرویس مخصوص عروسی جابه‌جا شوید، حتماً این گزینه را تیک بزنید.</small>
+            </div>
+
+            <div class="form-group">
+                <label>چه ساعتی قصد بازگشت دارید؟</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="departure" value="12:00" required> ساعت ۱۲:۰۰ (بعد از اتمام جشن)</label>
+                    <label><input type="radio" name="departure" value="02:00"> ساعت ۰۲:۰۰ (بعد از اتمام افترپارتی)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>آیا چیز خاصی هست که در طول مراسم نیاز داشته باشید؟</label>
+                <textarea name="extra-info" rows="4" placeholder="اگر موردی هست برایمان بنویسید..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">ارسال فرم</button>
+        </form>
+    </div>
+  </section>
 </section>
 <script>
   // این کد مخصوص حرکت دادن نوار پیام‌هاست
