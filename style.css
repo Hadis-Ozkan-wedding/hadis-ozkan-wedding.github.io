@@ -760,92 +760,93 @@ html[lang="fa"] .timeline-item::before {
     background: #f19a9a;
     color: #fff;
 }
-.timeline-section {
-    padding: 80px 20px;
+
+.timeline-section-modern {
+    padding: 100px 20px;
+    background-color: #f6eee3; /* یک رنگ بژ خیلی روشن برای پس‌زمینه که به کاغذ بیاید */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-paper {
     background: #fff;
+    padding: 60px 40px;
+    border-radius: 5px; /* طبق عکس لبه‌ها گرد نیستند */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1100px;
     text-align: center;
+    border: 1px solid #e1e1e1; /* یک لبه ظریف */
 }
 
-.timeline-container {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-/* خط عمودی نقطه‌چین وسط */
-.timeline-container::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: #f19a9a;
-    background-image: linear-gradient(to bottom, #f19a9a 50%, rgba(255,255,255,0) 0%);
-    background-position: right;
-    background-size: 2px 10px; /* ایجاد حالت نقطه‌چین */
-    background-repeat: repeat-y;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-}
-
-.timeline-item {
-    padding: 20px 0;
-    position: relative;
-    width: 50%;
-    text-align: right;
-    padding-right: 40px;
-}
-
-/* جابه‌جایی یکی‌در‌میان به چپ و راست */
-.timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
-    padding-right: 0;
-    padding-left: 40px;
-}
-
-/* دایره‌های کوچک */
-.timeline-dot {
-    width: 16px;
-    height: 16px;
-    background: #f19a9a;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -8px; /* برای آیتم‌های راست */
-    z-index: 1;
-}
-
-.timeline-item:nth-child(even) .timeline-dot {
-    left: -8px; /* برای آیتم‌های چپ */
-}
-
-.timeline-content h4 {
-    margin: 5px 0;
+.paper-title {
+    font-family: 'cursive', sans-serif; /* برای فونت دست‌نویس */
+    font-size: 3.5rem;
     color: #333;
+    margin-bottom: 10px;
 }
 
-.timeline-content .time {
+.couple-names {
+    font-size: 1rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.timeline-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    margin-bottom: 60px;
+}
+
+.events-container-modern {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* برای اینکه در موبایل زیر هم بیفتند */
+}
+
+.event-step-modern {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.event-time-modern {
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #f19a9a;
-    display: block;
-    margin-bottom: 5px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* تنظیمات برای موبایل */
-@media screen and (max-width: 600px) {
-    .timeline-container::after {
-        left: 20px;
-    }
-    .timeline-item {
-        width: 100%;
-        text-align: left !important;
-        padding-left: 50px !important;
-        padding-right: 0 !important;
-    }
-    .timeline-dot {
-        left: 12px !important;
-    }
+.event-icon-circle-modern {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #e1e1e1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.event-icon-circle-modern img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.event-step-modern h4 {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
