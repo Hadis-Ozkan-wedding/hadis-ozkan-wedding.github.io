@@ -850,3 +850,111 @@ html[lang="fa"] .timeline-item::before {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+/* تنظیمات کلی بخش فرم */
+.rsvp-section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.rsvp-container {
+    width: 100%;
+    max-width: 650px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.rsvp-deadline {
+    color: #e27d60; /* رنگ هشدار ملایم */
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+/* تنظیمات گروه‌های ورودی */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* هماهنگ‌سازی راست‌چین و چپ‌چین به صورت هوشمند */
+html[dir="rtl"] .form-group, 
+.rsvp-section:not([dir="ltr"]) .form-group {
+    text-align: right;
+}
+
+.rsvp-section[dir="ltr"] .form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f19a9a;
+}
+
+.form-help {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 6px;
+}
+
+/* استایل بخش تیک زدن (چک‌باکس) */
+.checkbox-group {
+    background: #fdfaf7;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #e27d60;
+}
+
+.checkbox-label {
+    cursor: pointer;
+    font-weight: bold !important;
+}
+
+/* استایل دکمه ارسال */
+.submit-btn {
+    background-color: #f19a9a;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #e08585;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(224, 133, 133, 0.4);
+}
