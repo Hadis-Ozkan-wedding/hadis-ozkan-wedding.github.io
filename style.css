@@ -850,111 +850,151 @@ html[lang="fa"] .timeline-item::before {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/* تنظیمات کلی بخش فرم */
-.rsvp-section {
-    padding: 80px 20px;
-    background-color: #f9f9f9;
+
+/* تنظیمات کلی بخش فرم دعوت‌نامه-مانند */
+.rsvp-section-modern {
+    padding: 100px 20px;
+    background-color: #f7f3ee; /* یک رنگ بژ خیلی ملایم برای پس‌زمینه که به کاغذ بیاید */
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.rsvp-container {
+/* کارت دعوت‌نامه */
+.rsvp-card-modern {
     width: 100%;
-    max-width: 650px;
+    max-width: 750px;
     background: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 80px 60px; /* فاصله‌های بزرگ طبق عکس */
+    border: 1px solid #e1e1e1; /* حاشیه ظریف */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    text-align: center; /* متمرکز کردن همه چیز */
+    border-radius: 0; /* طبق عکس لبه‌ها تیز هستند برای ظاهر کلاسیک */
+}
+
+/* عنوان RSVP بزرگ و با فاصله */
+.rsvp-card-modern .rsvp-title-alt {
+    font-family: Garamond, "Times New Roman", serif; /* فونت کلاسیک‌تر */
+    font-size: 5rem;
+    color: #333;
+    letter-spacing: 15px; /* فاصله زیاد بین حروف طبق عکس */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* زیرنویس دعوت‌نامه */
+.rsvp-card-modern .rsvp-deadline-modern {
+    font-family: Garamond, "Times New Roman", serif;
+    font-style: italic; /* برای فونت دست‌نویس‌مانند در عکس */
+    color: #888;
+    margin-bottom: 60px;
+}
+
+/* گروه‌های ورودی */
+.form-group-modern {
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center; /* متمرکز کردن لیبل‌ها */
+}
+
+/* لیبل‌ها - حالا مثل عکس خط دارند */
+.form-group-modern label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Garamond, "Times New Roman", serif;
+    font-size: 1.1rem;
+    color: #555;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* ورودی‌ها - فقط خط تیره پایینی طبق عکس */
+.form-group-modern input[type="text"],
+.form-group-modern input[type="number"],
+.form-group-modern input[type="tel"],
+.form-group-modern select {
+    width: 100%;
+    max-width: 500px; /* عرض ورودی‌ها کمتر از کارت */
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e1e1e1; /* فقط خط پایینی */
+    padding: 10px 0;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333;
+    text-align: center; /* متن ورودی متمرکز */
+    transition: 0.3s;
+}
+
+.form-group-modern input:focus,
+.form-group-modern select:focus {
+    outline: none;
+    border-color: #f19a9a; /* رنگ تم عروسی در هنگام تمرکز */
+}
+
+.form-help-modern {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* استایل سوال آخر (تشریحی) */
+.full-width-modern {
+    width: 100%;
     text-align: center;
 }
 
-.rsvp-deadline {
-    color: #e27d60; /* رنگ هشدار ملایم */
-    font-weight: bold;
-    margin-bottom: 35px;
-}
-
-/* تنظیمات گروه‌های ورودی */
-.form-group {
-    margin-bottom: 25px;
-}
-
-/* هماهنگ‌سازی راست‌چین و چپ‌چین به صورت هوشمند */
-html[dir="rtl"] .form-group, 
-.rsvp-section:not([dir="ltr"]) .form-group {
-    text-align: right;
-}
-
-.rsvp-section[dir="ltr"] .form-group {
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #444;
-}
-
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group input[type="tel"],
-.form-group select,
-.form-group textarea {
+.form-group-modern textarea {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    max-width: 600px;
+    margin: 15px auto 0 auto; /* خط جدید پایین سوال */
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 15px;
     font-family: inherit;
     font-size: 1rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    text-align: center; /* متن متمرکز */
+    transition: 0.3s;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form-group-modern textarea:focus {
     outline: none;
     border-color: #f19a9a;
 }
 
-.form-help {
-    display: block;
-    font-size: 0.85rem;
-    color: #888;
-    margin-top: 6px;
+/* چک‌باکس و رادیو متمرکز */
+.centered-options-modern {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* استایل بخش تیک زدن (چک‌باکس) */
-.checkbox-group {
-    background: #fdfaf7;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px dashed #e27d60;
-}
-
-.checkbox-label {
+.centered-options-modern label {
+    font-size: 0.95rem;
     cursor: pointer;
-    font-weight: bold !important;
 }
 
-/* استایل دکمه ارسال */
-.submit-btn {
-    background-color: #f19a9a;
+/* دکمه ارسال شیک‌تر */
+.submit-btn-modern {
+    background-color: transparent;
+    border: 1px solid #e1e1e1;
+    color: #555;
+    padding: 15px 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+
+.submit-btn-modern:hover {
+    background-color: #333;
     color: white;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.submit-btn:hover {
-    background-color: #e08585;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(224, 133, 133, 0.4);
+    border-color: #333;
 }
