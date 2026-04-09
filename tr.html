@@ -220,33 +220,33 @@
         </div>
         </div>
 </section>
-<section id="rsvp" class="rsvp-section" dir="ltr">
-    <div class="rsvp-container">
-        <h2 class="section-title-alt">Anket</h2>
-        <p class="rsvp-deadline">Katılım durumunuzu lütfen 1 Haziran'a kadar bu formu doldurarak bildiriniz.</p>
+<section id="rsvp" class="rsvp-section-modern">
+    <div class="rsvp-card-modern">
+        <h2 class="rsvp-title-alt">RSVP</h2>
+        <p class="rsvp-deadline-modern">Katılım durumunuzu lütfen 1 Haziran'a kadar bu formu doldurarak bildiriniz.</p>
 
-        <form action="https://formspree.io/f/mjgpdoeb" method="POST" class="rsvp-form">
+        <form action="https://formspree.io/f/mjgpdoeb" method="POST" class="rsvp-form-modern">
             
-            <div class="form-group">
+            <div class="form-group-modern">
                 <label>Ad Soyad</label>
-                <input type="text" name="name" required placeholder="Adınızı ve soyadınızı giriniz">
+                <input type="text" name="name" required placeholder="__________________________">
             </div>
 
-            <div class="form-group">
+            <div class="form-group-modern">
                 <label>Davetli Sayısı</label>
-                <input type="number" name="guests" min="1" max="10" required>
-                <small class="form-help">Lütfen sizinle birlikte gelecek toplam kişi sayısını (kendiniz dahil) belirtiniz.</small>
+                <input type="number" name="guests" min="1" max="10" required placeholder="___">
+                <small class="form-help-modern">Lütfen sizinle birlikte gelecek toplam kişi sayısını belirtiniz.</small>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-modern">
                 <label>Telefon Numarası</label>
-                <input type="tel" name="phone" required placeholder="05xx xxx xx xx">
+                <input type="tel" name="phone" required placeholder="05__________">
             </div>
 
-            <div class="form-group">
+            <div class="form-group-modern">
                 <label>İçecek Tercihiniz</label>
                 <select name="drink" required>
-                    <option value="" disabled selected>Lütfen seçiniz...</option>
+                    <option value="" disabled selected>__________________________</option>
                     <option value="Beyaz Şarap">Beyaz Şarap</option>
                     <option value="Kırmızı Şarap">Kırmızı Şarap</option>
                     <option value="Cin">Cin</option>
@@ -254,17 +254,17 @@
                 </select>
             </div>
 
-            <div class="form-group checkbox-group">
-                <label class="checkbox-label">
+            <div class="form-group-modern checkbox-group-modern">
+                <label class="checkbox-label-modern">
                     <input type="checkbox" name="shuttle"> Shuttle servisi kullanmak istiyorum
                 </label>
-                <small class="form-help">Düğün için ayarlanacak özel servisten yararlanmak istiyorsanız lütfen bu seçeneği işaretleyin.</small>
+                <small class="form-help-modern">Düğün için ayarlanacak özel servisten yararlanmak istiyorsanız işaretleyin.</small>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-modern">
                 <label>Dönüş için hangi saati tercih edersiniz?</label>
-                <div class="radio-options">
-                    <label style="display: block; margin-bottom: 8px;">
+                <div class="centered-options-modern radio-options-modern">
+                    <label style="display: block; margin-bottom: 5px;">
                         <input type="radio" name="departure" value="00:00" required> Saat 00:00 (Düğün bitimi)
                     </label>
                     <label style="display: block;">
@@ -273,14 +273,15 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-modern full-width-modern">
                 <label>Tören boyunca ihtiyaç duyabileceğiniz özel bir şey var mı?</label>
-                <textarea name="extra-info" rows="4" placeholder="Varsa lütfen bizimle paylaşın..."></textarea>
+                <textarea name="extra-info" rows="3" placeholder="Varsa paylaşın..."></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Formu Gönder</button>
+            <button type="submit" class="submit-btn-modern">Formu Gönder</button>
         </form>
     </div>
+</section>
 </section>  
 </div>
     </div>
