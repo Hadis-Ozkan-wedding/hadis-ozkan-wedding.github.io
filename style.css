@@ -122,36 +122,35 @@ section {
   margin-top: 5px;
   opacity: 0.8;
 }
-
-/* ================= اصلاح بخش پوستر (فقط برای حل مشکل کش آمدن) ================= */
+/* ================= بخش دعوتنامه (اصلاح نهایی) ================= */
 .invitation-section {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  padding: 60px 20px;
+  background-color: #f7f3ee; /* رنگ پس‌زمینه پشت پوستر */
+  padding: 100px 20px; /* فاصله از بالا و پایین */
+  min-height: 800px; /* حداقل ارتفاع که غیب نشه */
 }
 
-.fa-poster, .tr-poster {
-  width: 100%;
-  max-width: 500px; /* پوستر در لپ‌تاپ دیگر کش نمی‌آید */
-  height: 750px;
+.fa-poster {
+  background-image: url("images/Poster-fa.jpg"); /* مطمئن شو اسم فایل دقیقاً همینه */
   background-size: contain !important;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100%;
+  max-width: 500px; /* عرض مناسب برای لپ‌تاپ */
+  height: 750px; /* ارتفاع ثابت برای اینکه غیب نشه */
 }
 
-/* موبایل */
+/* تنظیمات مخصوص گوشی */
 @media (max-width: 768px) {
-  .hero-content h1 { font-size: 3.5rem; }
-  .countdown { gap: 15px; }
-  .countdown div { padding: 15px; min-width: 70px; }
-  
-  .fa-poster, .tr-poster {
+  .invitation-section {
+    padding: 0;
+  }
+  .fa-poster {
     max-width: 100%;
-    height: 100vh;
-    background-size: cover !important; /* در موبایل مثل قبل تمام‌صفحه است */
+    height: 100vh; /* در موبایل تمام‌صفحه */
+    background-size: cover !important; /* در موبایل کل صفحه رو پر کنه */
   }
 }
 
