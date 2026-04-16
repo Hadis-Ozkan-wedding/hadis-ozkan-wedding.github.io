@@ -141,6 +141,15 @@ section {
   max-width: 500px; /* عرض مناسب برای لپ‌تاپ */
   height: 750px; /* ارتفاع ثابت برای اینکه غیب نشه */
 }
+.tr-poster {
+  background-image: url("images/Poster-tr.jpg"); /* مطمئن شو اسم فایل دقیقاً همینه */
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 500px; /* عرض مناسب برای لپ‌تاپ */
+  height: 750px; /* ارتفاع ثابت برای اینکه غیب نشه */
+}
 
 /* تنظیمات مخصوص گوشی */
 @media (max-width: 768px) {
