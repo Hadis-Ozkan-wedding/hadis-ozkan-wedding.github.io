@@ -1,3 +1,4 @@
+/* ================= تنظیمات کلی و فونت ================= */
 html {
   scroll-behavior: smooth;
 }
@@ -8,471 +9,172 @@ html {
   box-sizing: border-box;
 }
 
-/* HERO BACKGROUND */
+body {
+  font-family: 'Vazirmatn', sans-serif; /* پیش‌فرض برای فارسی */
+  background-color: #f7f3ee;
+  color: #333;
+}
+
+/* فاصله‌گذاری عمومی برای تمام بخش‌ها جهت ایجاد فضای تنفس */
+section {
+  padding: 100px 20px;
+}
+
+/* ================= نوار منو (Navbar) ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #444;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #f19a9a;
+}
+
+/* ================= بخش اول (Hero) ================= */
 .hero {
   position: relative;
   height: 100vh;
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position: 50% 30%;
-  background-repeat: no-repeat;
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
-/* DARK OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.3);
 }
 
-/* LANGUAGE SWITCH */
-/* ================= LANGUAGE SWITCH ================= */
-
-
-/* CONTENT */
 .hero-content {
   position: relative;
   z-index: 2;
   color: white;
 }
 
-/* NAME */
 .hero-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;
-  margin-bottom: 20px;
+  font-size: 4rem;
+  margin-bottom: 10px;
 }
 
-/* فارسی */
-html[lang="fa"] .hero-content h1 {
-  font-family: 'Vazirmatn', sans-serif;
-  font-weight: 700;
-  font-size: 5.5rem;
-}
-
-/* SUBTITLE */
-.hero-content p {
-  margin: 20px 0;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-/* COUNTDOWN */
+/* ================= تایمر معکوس (Countdown) ================= */
 .countdown {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 35px;
-  margin-top: 40px;
-  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .countdown div {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(8px);
-  padding: 20px 25px;
-  border-radius: 20px;
-  min-width: 90px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 15px;
+  min-width: 80px;
 }
 
 .countdown span {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2rem;
   display: block;
+  font-weight: bold;
 }
 
-/* label under number */
-.countdown div::after {
-  content: attr(data-label);
-  display: block;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  margin-top: 5px;
-  opacity: 0.8;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 35px;
-  background: #fff;
-  color: #333;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #333;
-  color: #fff;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero {
-    padding-bottom: 80px;
-  }
-
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-
-  html[lang="fa"] .hero-content h1 {
-    font-size: 3.5rem;
-  }
-
-  .countdown {
-    gap: 15px;
-  }
-
-  .countdown div {
-    padding: 15px 18px;
-    min-width: 70px;
-  }
-
-  .countdown span {
-    font-size: 1.8rem;
-  }
-    .invitation-section {
-    background-size: contain !important;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-color: #ffffff;
-
-  }
-
-}
-/* ================= NAVBAR ================= */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 25px 0;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
-}
-
-.navbar ul {
-  list-style: none;
+/* ================= بخش دعوتنامه (پوستر) ================= */
+.invitation-section {
+  background-color: #f7f3ee;
   display: flex;
-  flex-direction: row; /* این باعث افقی شدن میشه */
   justify-content: center;
   align-items: center;
-  gap: 28px;
-  padding: 0;
-  margin: 0;
+  padding: 80px 20px;
 }
 
-.navbar li {
-  display: inline-block;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 500;
-  transition: 0.3s ease;
-  position: relative;
-}
-
-/* کوچکتر برای ترکی که کلمات طولانی‌ترن */
-html[lang="tr"] .navbar a {
-  font-size: 12px;
-  letter-spacing: 0.5px;
-}
-
-
-/* افکت خط زیر هنگام هاور */
-.navbar a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 1px;
-  background: white;
-  transition: 0.3s ease;
-}
-
-.navbar a:hover::after {
-  width: 100%;
-}
-
-/* فاصله بده چون navbar فیکس هست */
-.hero {
-  padding-top: 120px;
-}
-
-/* موبایل */
-@media (max-width: 768px) {
-  .navbar ul {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .navbar a {
-    font-size: 11px;
-  }
-}
-/* ================= LANGUAGE SWITCH ================= */
-
-.lang-switch {
-  position: fixed;
-  top: 30px;
-  right: 40px;
-  z-index: 2000; /* بالاتر از navbar */
-}
-
-html[dir="rtl"] .lang-switch {
-  right: auto;
-  left: 40px;
-}
-
-.lang-switch a {
-  margin-left: 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 13px;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.lang-switch a:hover {
-  opacity: 0.7;
-}
-/* language inside navbar */
-
-.lang-item {
-  margin-left: 30px;
-  font-size: 12px;
-}
-
-.lang-item a {
-  letter-spacing: 1px;
-  opacity: 0.8;
-}
-
-.lang-item a:hover {
-  opacity: 1;
-}
-/* ================= INVITATION SECTION ================= */
-
-.invitation-section {
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
+.fa-poster, .tr-poster {
+  background-size: contain !important;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1;
+  width: 100%;
+  max-width: 550px; /* اندازه استاندارد پوستر در لپ‌تاپ */
+  height: 800px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  background-color: #fff;
 }
 
-/* پوستر فارسی */
-.fa-poster {
-  background-image: url("images/Poster-fa.jpg");
-
-}
-
-
-/* پوستر ترکی */
-.tr-poster {
-  background-image: url("images/Poster-tr.jpg");
-}
-
-.invitation-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.1);
-}
-
-/* بخش عروس و داماد */
+/* ================= بخش عروس و داماد ================= */
 .couple-section {
-  padding: 100px 20px;
+  background-color: #fff;
   text-align: center;
-  background: #fff; /* می‌توانید رنگ پس‌زمینه تغییر دهید */
 }
 
-.couple-section .section-title {
-  font-family: 'Great Vibes', cursive; /* فونت دست‌نویس برای عنوان */
-  font-size: 3rem;
-  margin-bottom: 50px;
-  color: #e07a7a; /* رنگ صورتی ملایم */
-}
-
-/* کانتینر کارت ها */
 .couple-container {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 40px;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
-/* کارت هر نفر */
 .couple-card {
-  background: #fff;
-  border: 2px solid #eee; /* کادر دور عکس و متن */
+  padding: 30px;
+  width: 300px;
   border-radius: 20px;
-  padding: 30px 20px;
-  width: 280px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border: 1px solid #f9f9f9;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
-/* عکس دایره ای */
-.couple-card .couple-img {
-  width: 150px;
-  height: 150px;
+.couple-img {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 3px solid #e07a7a; /* حاشیه دور عکس */
+  border: 3px solid #f19a9a;
 }
 
-/* اسم */
-.couple-card .couple-name {
-  font-family: 'Dancing Script', cursive; /* فونت دست‌نویس انگلیسی */
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #333;
-}
+/* ================= بخش‌های مدرن (برنامه، پرسشنامه، گالری) ================= */
+/* کدهایی که در پیام‌های قبلی برای این ۳ بخش دادم را هم به انتهای این فایل اضافه کن */
 
-/* متن کوتاه زیر عکس */
-.couple-card .couple-text {
-  font-family: 'Playfair Display', serif; /* متن قابل خواندن */
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.5;
-}
-
-/* موبایل */
+/* ================= تنظیمات موبایل (Responsive) ================= */
 @media (max-width: 768px) {
-  .couple-container {
-    gap: 30px;
+  section { padding: 60px 15px; }
+  
+  .hero-content h1 { font-size: 2.5rem; }
+  
+  .fa-poster, .tr-poster {
+    height: 100vh;
+    max-width: 100%;
+    box-shadow: none;
+    background-size: cover !important;
   }
-
-  .couple-card {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .couple-card .couple-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  }
+  
+  .navbar ul { gap: 10px; }
 }
-
-/* حالت افقی بزرگ (landscape) یا صفحه خیلی پهن */
-@media (min-width: 1200px) and (orientation: landscape) {
-  .couple-container {
-    flex-direction: column; /* کارت‌ها زیر هم */
-    gap: 50px;
-    align-items: center;
-  }
-
-  .couple-card {
-    max-width: 350px;
-    width: 90%;
-  }
-}
-.couple-section {
-  position: relative;
-  padding: 100px 20px;
-  text-align: center;
-  background-image: url("images/couple-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent; /* هیچ سفید یا رنگ دیگه‌ای */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  z-index: 1;
-}
-
-/* عنوان بخش */
-.couple-section .section-title {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-/* کارت‌ها */
-.couple-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.couple-card {
-  background: rgba(255, 255, 255, 0.15); /* رنگ شفاف کارت */
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 300px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
-
-.couple-card:hover {
-  transform: translateY(-10px);
-}
-
-/* عکس‌ها */
-.couple-img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px 20px 0 0;
-  margin-bottom: 15px;
-}
-
-/* نام و متن */
-.couple-name {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-family: 'Dancing Script', cursive;
-}
-
-.couple-text {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* موبایل */
-@media (max-width: 768px) {
-  .couple-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .couple-card {
-    max-width: 90%;
-  }
-
-  .couple-section .section-title {
-    font-size: 2.5rem;
-  }
-}  
 /* ================= LOVE STORY ================= */
 
 .story-section {
