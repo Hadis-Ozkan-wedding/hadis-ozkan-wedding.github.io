@@ -165,11 +165,30 @@ section {
 
 
 /* ================= بخش عروس و داماد ================= */
+
 .couple-section {
-  background-color: #fff;
+  position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
+/* لایه بک‌گراند */
+.couple-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/couple-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* محتوای روی بک‌گراند */
+.couple-section * {
+  position: relative;
+  z-index: 2;
+}
 .couple-container {
   display: flex;
   justify-content: center;
