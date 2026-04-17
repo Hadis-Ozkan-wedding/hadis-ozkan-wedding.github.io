@@ -164,50 +164,37 @@ section {
   }
   }
 
-/* ================= بخش دعوتنامه (حل مشکل بریدگی در گوشی) ================= */
+/* ================= بخش دعوتنامه (نسخه نهایی و ضد بریدگی) ================= */
 .invitation-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7f3ee;
-  padding: 80px 15px; /* فاصله در لپ‌تاپ */
-}
-
-.fa-poster,
-.tr-poster {
+  background-color: #f7f3ee; /* رنگ پس‌زمینه هماهنگ با تم */
+  padding: 60px 20px;
   width: 100%;
-  max-width: 520px;
-  height: 750px;
-  /* در لپ‌تاپ contain بهتر است تا اگر پنجره کوچک شد عکس کات نشود */
-  background-size: contain; 
-  background-position: center;
-  background-repeat: no-repeat;
-  flex-shrink: 0;
+  min-height: auto;
 }
 
-.fa-poster {
-  background-image: url("images/Poster-fa.jpg");
+.invitation-img {
+  width: 100%;
+  max-width: 500px; /* عرض در دسکتاپ */
+  height: auto;    /* حفظ تناسب خودکار */
+  display: block;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+  border-radius: 5px; /* کمی انحنا برای شیک شدن */
 }
 
-.tr-poster {
-  background-image: url("images/Poster-tr.jpg");
-}
-
-/* اصلاح مخصوص گوشی */
+/* تنظیمات مخصوص موبایل (هم عمودی هم افقی) */
 @media (max-width: 768px) {
   .invitation-section {
-    padding: 20px 10px; /* یک فاصله ظریف از اطراف که به لبه‌ها نچسبد */
-    min-height: auto;
+    padding: 20px 10px; /* فاصله از لبه‌ها در موبایل */
   }
 
-  .fa-poster,
-  .tr-poster {
-    max-width: 100%;
-    /* تغییر مهم: ارتفاع خودکار بر اساس نسبت ابعاد عکس شما */
-    /* اگر عکس شما خیلی کشیده است، عدد 140vw را کمی زیاد یا کم کنید */
-    height: 140vw; 
-    background-size: contain; /* تضمین می‌کند عکس کامل دیده شود */
-    background-position: center top; /* عکس از بالا شروع شود */
+  .invitation-img {
+    max-width: 100%; /* در موبایل کل عرض را بگیرد */
+    /* این خط باعث می‌شود در حالت افقی هم عکس کات نشود و کوچک شود تا جا بگیرد */
+    max-height: 90vh; 
+    width: auto;
   }
 }
 
