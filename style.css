@@ -169,39 +169,36 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7f3ee; /* رنگ پس‌زمینه پشت پوستر */
-  padding: 100px 20px; /* فاصله از بالا و پایین */
-  min-height: 800px; /* حداقل ارتفاع که غیب نشه */
+  background-color: #f7f3ee;
+  padding: 60px 10px;
 }
 
-.fa-poster {
-  background-image: url("images/Poster-fa.jpg"); /* مطمئن شو اسم فایل دقیقاً همینه */
-  background-size: contain !important;
-  background-repeat: no-repeat;
-  background-position: center;
+.fa-poster,
+.tr-poster {
   width: 100%;
-  max-width: 500px; /* عرض مناسب برای لپ‌تاپ */
-  height: 750px; /* ارتفاع ثابت برای اینکه غیب نشه */
+  max-width: 500px;
+  aspect-ratio: 2 / 3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.fa-poster {
+  background-image: url("images/Poster-fa.jpg");
 }
 .tr-poster {
-  background-image: url("images/Poster-tr.jpg"); /* مطمئن شو اسم فایل دقیقاً همینه */
-  background-size: contain !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  max-width: 500px; /* عرض مناسب برای لپ‌تاپ */
-  height: 750px; /* ارتفاع ثابت برای اینکه غیب نشه */
+  background-image: url("images/Poster-tr.jpg");
 }
-
-/* تنظیمات مخصوص گوشی */
 @media (max-width: 768px) {
   .invitation-section {
     padding: 0;
   }
-  .fa-poster {
-    max-width: 100%;
-    height: 100vh; /* در موبایل تمام‌صفحه */
-    background-size: cover !important; /* در موبایل کل صفحه رو پر کنه */
+
+  .fa-poster,
+  .tr-poster {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    aspect-ratio: auto;
   }
 }
 
