@@ -1,4 +1,3 @@
-/* ================= کدهای پایه خودت ================= */
 html {
   scroll-behavior: smooth;
 }
@@ -9,18 +8,17 @@ html {
   box-sizing: border-box;
 }
 
-/* اضافه کردن فاصله بین بخش‌ها بدون خراب کردن دیزاین */
 section {
   padding: 80px 20px; 
 }
 
-/* ================= نوار بالا (دقیقاً استایل خودت) ================= */
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 25px 0;
-  background: rgba(0, 0, 0, 0.35); /* همان مشکی نیمه‌شفاف خودت */
+  padding: 20px 10px;
+  background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(12px);
   z-index: 1000;
 }
@@ -31,6 +29,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 28px;
+  flex-wrap: wrap; /* مهم برای موبایل */
 }
 
 .navbar a {
@@ -42,6 +41,7 @@ section {
   font-weight: 500;
   transition: 0.3s ease;
   position: relative;
+  white-space: nowrap; /* جلوگیری از شکستن متن */
 }
 
 .navbar a::after {
@@ -59,7 +59,7 @@ section {
   width: 100%;
 }
 
-/* ================= بخش هیرو و روزشمار (دقیقاً استایل خودت) ================= */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   height: 100vh;
@@ -70,19 +70,20 @@ section {
   align-items: flex-end;
   justify-content: center;
   text-align: center;
-  padding-bottom: 150px; /* فاصله پایین برای روزشمار */
+  padding-bottom: 120px;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.45); /* کمی تیره‌تر برای خوانایی */
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   color: white;
+  padding: 0 10px;
 }
 
 .hero-content h1 {
@@ -92,21 +93,24 @@ section {
   margin-bottom: 20px;
 }
 
+/* ================= COUNTDOWN ================= */
 .countdown {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 35px;
   margin-top: 40px;
+  flex-wrap: wrap; /* مهم */
 }
 
 .countdown div {
-  background: rgba(255,255,255,0.15); /* استایل شیشه‌ای خودت */
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(8px);
   padding: 20px 25px;
   border-radius: 20px;
   min-width: 90px;
   color: #fff;
+  text-align: center;
 }
 
 .countdown span {
@@ -122,6 +126,44 @@ section {
   margin-top: 5px;
   opacity: 0.8;
 }
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  section {
+    padding: 60px 15px;
+  }
+
+  /* navbar */
+  .navbar ul {
+    gap: 8px;
+  }
+
+  .navbar a {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  /* hero */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  /* countdown */
+  .countdown {
+    gap: 10px;
+  }
+
+  .countdown div {
+    min-width: 70px;
+    padding: 12px;
+  }
+
+  .countdown span {
+    font-size: 1.5rem;
+  }
+  }
+
 /* ================= بخش دعوتنامه (اصلاح نهایی) ================= */
 .invitation-section {
   display: flex;
