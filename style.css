@@ -164,46 +164,50 @@ section {
   }
   }
 
-/* ================= بخش دعوتنامه (اصلاح نهایی) ================= */
+/* ================= بخش دعوتنامه (حل مشکل بریدگی در گوشی) ================= */
 .invitation-section {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f7f3ee;
-  padding: 80px 15px;
+  padding: 80px 15px; /* فاصله در لپ‌تاپ */
 }
 
-/* مشترک هر دو پوستر */
 .fa-poster,
 .tr-poster {
   width: 100%;
   max-width: 520px;
-  height: 750px;              /* 👈 این مهمه (نه aspect-ratio) */
-  background-size: cover;
+  height: 750px;
+  /* در لپ‌تاپ contain بهتر است تا اگر پنجره کوچک شد عکس کات نشود */
+  background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
-  flex-shrink: 0;            /* 👈 جلوگیری از له شدن در flex */
+  flex-shrink: 0;
 }
 
-/* فارسی */
 .fa-poster {
   background-image: url("images/Poster-fa.jpg");
 }
 
-/* ترکی */
 .tr-poster {
   background-image: url("images/Poster-tr.jpg");
 }
+
+/* اصلاح مخصوص گوشی */
 @media (max-width: 768px) {
   .invitation-section {
-    padding: 0;
+    padding: 20px 10px; /* یک فاصله ظریف از اطراف که به لبه‌ها نچسبد */
+    min-height: auto;
   }
 
   .fa-poster,
   .tr-poster {
-    width: 100%;
     max-width: 100%;
-    height: 100vh;     /* فول اسکرین واقعی */
+    /* تغییر مهم: ارتفاع خودکار بر اساس نسبت ابعاد عکس شما */
+    /* اگر عکس شما خیلی کشیده است، عدد 140vw را کمی زیاد یا کم کنید */
+    height: 140vw; 
+    background-size: contain; /* تضمین می‌کند عکس کامل دیده شود */
+    background-position: center top; /* عکس از بالا شروع شود */
   }
 }
 
