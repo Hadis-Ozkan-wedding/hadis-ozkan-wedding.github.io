@@ -239,7 +239,11 @@ section {
   flex-wrap: wrap;
   margin-top: 50px;
 }
-
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 600;
+}
 .couple-card {
   padding: 30px;
   width: 300px;
