@@ -221,6 +221,12 @@ section {
 }
 
 /* محتوای روی بک‌گراند */
+.text-box {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
 .couple-section * {
   position: relative;
   z-index: 2;
@@ -249,9 +255,6 @@ section {
   margin-bottom: 20px;
   border: 3px solid #f19a9a;
 }
-
-/* ================= بخش‌های مدرن (برنامه، پرسشنامه، گالری) ================= */
-/* کدهایی که در پیام‌های قبلی برای این ۳ بخش دادم را هم به انتهای این فایل اضافه کن */
 
 /* ================= تنظیمات موبایل (Responsive) ================= */
 @media (max-width: 768px) {
