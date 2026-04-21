@@ -200,40 +200,42 @@ section {
 
 
 /* ================= بخش عروس و داماد ================= */
-.title {
-  font-family: 'Great Vibes', cursive;/* نام فونت دلخواهت را اینجا بگذار */
-  font-size: 36px;
-  font-weight: 600;
-  color: #444; /* اگر می‌خواهی رنگش هم متفاوت باشد */
-}
-.couple-section {
-  position: relative;
+/* ۱. تغییر فونت و استایل عنوان اصلی */
+.section-title {
+  font-family: 'Great Vibes', cursive; /* نام فونت دلخواه را اینجا بنویسید */
+  font-size: 38px;
+  font-weight: bold;
   text-align: center;
-  overflow: hidden;
-  padding: 100px 20px
-}
-
-/* لایه بک‌گراند */
-.couple-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("images/couple-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-/* محتوای روی بک‌گراند */
-.text-box {
-  background: rgba(255, 255, 255, 0.75);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2; /* برای اینکه روی بک‌گراند بیاید */
   color: #333;
-  padding: 22px 25px;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  backdrop-filter: blur(5px); /* پیشنهاد: این کد باعث می‌شود پشت کادر کمی مات (Blur) شود که خیلی شیک است */
 }
+
+/* ۲. اصلاح کادر متن و شفافیت آن */
+.couple-card {
+  /* تغییر رنگ پس‌زمینه به شفاف: مقدار 0.6 یعنی 60 درصد غلظت */
+  background: rgba(255, 255, 255, 0.6); 
+  padding: 30px;
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  
+  /* این خط باعث می‌شود محتوای پشت کادر کمی مات شود و متن خواناتر بماند */
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* استایل متن داخل کادر */
+.couple-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 10px;
+}
+
+
 
 .couple-section * {
   position: relative;
