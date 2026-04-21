@@ -200,7 +200,12 @@ section {
 
 
 /* ================= بخش عروس و داماد ================= */
-
+.title {
+  font-family: 'Great Vibes', cursive;/* نام فونت دلخواهت را اینجا بگذار */
+  font-size: 36px;
+  font-weight: 600;
+  color: #444; /* اگر می‌خواهی رنگش هم متفاوت باشد */
+}
 .couple-section {
   position: relative;
   text-align: center;
@@ -222,12 +227,14 @@ section {
 
 /* محتوای روی بک‌گراند */
 .text-box {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.75);
   color: #333;
   padding: 22px 25px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(5px); /* پیشنهاد: این کد باعث می‌شود پشت کادر کمی مات (Blur) شود که خیلی شیک است */
 }
+
 .couple-section * {
   position: relative;
   z-index: 2;
