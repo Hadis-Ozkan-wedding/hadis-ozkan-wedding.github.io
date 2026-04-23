@@ -553,7 +553,24 @@ html[lang="fa"] .timeline-item::before {
   text-align: center;
   flex-shrink: 0;
 }
+.message-card {
+  min-width: 220px;
+  max-width: 260px;
+}
 
+.message-card p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.6;
+
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .message-card img {
   width: 60px;
   height: 60px;
