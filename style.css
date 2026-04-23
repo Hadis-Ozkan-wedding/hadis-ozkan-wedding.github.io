@@ -530,8 +530,31 @@ html[lang="fa"] .timeline-item::before {
   background: #fff;
   text-align: center;
   overflow: hidden;
+  position: relative; /* 👈 مهم */
 }
-
+.greetings-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/greetings-bg.jpg"); /* عکس دلخواهت */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  filter: blur(8px);   /* 👈 بلور */
+  transform: scale(1.1); /* 👈 جلوگیری از بریدگی لبه‌ها بعد بلور */
+  
+  z-index: 0;
+}.greetings-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6); /* 👈 روشن برای تم مینیمال */
+  z-index: 1;
+}.greetings-section * {
+  position: relative;
+  z-index: 2;
+}
 .marquee {
   width: 100%;
   overflow: hidden;
