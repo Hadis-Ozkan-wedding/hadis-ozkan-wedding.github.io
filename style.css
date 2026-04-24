@@ -354,7 +354,32 @@ section {
 
 
 /* ================= LOVE STORY ================= */
+.story-section {
+  position: relative;
+  overflow: hidden;
+}
 
+/* لایه بک‌گراند */
+.story-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/story-bg.jpg"); /* اسم عکس */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.25;           /* شدت تصویر (کم = شیک‌تر) */
+  filter: blur(3px);       /* بلور ملایم */
+
+  z-index: 0;
+}
+
+/* محتوای روی بک‌گراند */
+.story-section * {
+  position: relative;
+  z-index: 2;
+}
 .story-section {
   padding: 120px 20px;
   background: #fff;
