@@ -1027,3 +1027,7 @@ html[lang="fa"] .timeline-item::before {
     padding: 15px 0; /* کم کردن ارتفاع نوار در موبایل برای فضای بیشتر */
   }
 }
+html[lang="fa"] .timeline-item {
+  text-align: right !important;
+  direction: rtl;
+}
