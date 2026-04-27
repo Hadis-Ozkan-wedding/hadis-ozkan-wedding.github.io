@@ -659,81 +659,118 @@ html[lang="fa"] .timeline-item::before {
   z-index: 0;
 }
 
+/* ================= WHEN & WHERE ================= */
+
+.when-where-section {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* بک‌گراند */
+.when-where-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/when-bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.2;
+  filter: blur(3px);
+
+  z-index: 0;
+}
+
+/* محتوا روی بک‌گراند */
 .when-where-section * {
   position: relative;
   z-index: 2;
 }
-.event-card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(10px);
-}
+
+/* عنوان */
 .section-title-alt {
-    font-family: 'cursive', sans-serif; /* اگر فونت خاصی دارید اینجا ست کنید */
-    font-size: 3rem;
-    color: #f19a9a;
-    margin-bottom: 50px;
+  font-family: cursive, sans-serif;
+  font-size: 3rem;
+  color: #f19a9a;
+  margin-bottom: 50px;
 }
 
+/* کانتینر کارت‌ها */
 .events-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* برای اینکه در موبایل زیر هم بیفتند */
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* کارت */
 .event-card {
-    background: #fff;
-    padding: 40px 20px;
-    border-radius: 5px; /* طبق عکس لبه‌ها خیلی گرد نیستند */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    flex: 1;
-    min-width: 300px;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #eee;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid rgba(255,255,255,0.3);
 }
-.event-icon {
-  width: 60px;
-  height: 60px;
+
+/* عکس بالای کارت */
+.event-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.event-icon img {
+.event-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* مهم: کش نیاد */
+  object-fit: cover;
+  display: block;
 }
 
+/* متن‌ها */
 .event-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .event-card p {
-    margin-bottom: 8px;
-    color: #777;
-    font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #777;
+  font-size: 0.95rem;
 }
 
+/* دکمه */
 .map-btn {
-    margin-top: auto;
-    padding: 10px 20px;
-    border: 1px solid #f19a9a;
-    color: #f19a9a;
-    text-decoration: none;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    transition: 0.3s;
+  margin-top: auto;
+  padding: 10px 20px;
+  border: 1px solid #f19a9a;
+  color: #f19a9a;
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 .map-btn:hover {
-    background: #f19a9a;
-    color: #fff;
+  background: #f19a9a;
+  color: #fff;
 }
 
 .timeline-section-modern {
