@@ -213,7 +213,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.25;           /* شدت تصویر (کم = شیک‌تر) */
-  filter: blur(3px);       /* بلور ملایم */
+  filter: blur(2px);       /* بلور ملایم */
   z-index: 0; /* پشت همه لایه‌ها */
 }
 
