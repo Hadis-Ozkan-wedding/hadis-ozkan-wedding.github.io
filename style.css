@@ -770,27 +770,51 @@ html[lang="fa"] .timeline-item::before {
   color: #fff;
 }
 
+/* ================= بخش تایم‌لاین (هماهنگ با استایل بلوری سایت) ================= */
 .timeline-section-modern {
+    position: relative; /* برای لایه‌بندی ضروری است */
     padding: 100px 20px;
-    background-color: #f6eee3; /* یک رنگ بژ خیلی روشن برای پس‌زمینه که به کاغذ بیاید */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* برای اینکه بلور از کادر بیرون نزند */
+    background: transparent; /* حذف رنگ بژ قبلی */
+}
+
+/* اضافه کردن بک‌گراند بلوری پشت کاغذ */
+.timeline-section-modern::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url("images/wedding-plan-bg.jpg"); /* 👈 اسم عکست رو چک کن */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* غلظت عکس پس‌زمینه */
+    filter: blur(8px); /* مقدار بلوری شدن */
+    z-index: 0;
 }
 
 .timeline-paper {
-    background: #fff;
+    position: relative; /* برای اینکه روی بک‌گراند قرار بگیرد */
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85); /* شیشه‌ای کردن خود کاغذ */
     padding: 60px 40px;
-    border-radius: 5px; /* طبق عکس لبه‌ها گرد نیستند */
+    border-radius: 12px; /* کمی گردتر برای هماهنگی با کادرهای قبلی */
     box-shadow: 0 15px 50px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 1100px;
     text-align: center;
-    border: 1px solid #e1e1e1; /* یک لبه ظریف */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px); /* افکت شیشه‌ای روی خود کاغذ */
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .paper-title {
-    font-family: 'cursive', sans-serif; /* برای فونت دست‌نویس */
+    font-family: 'Great Vibes', cursive; /* هماهنگ با بقیه بخش‌ها */
     font-size: 3.5rem;
     color: #333;
     margin-bottom: 10px;
@@ -798,7 +822,7 @@ html[lang="fa"] .timeline-item::before {
 
 .couple-names {
     font-size: 1rem;
-    color: #888;
+    color: #555;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 40px;
@@ -807,7 +831,7 @@ html[lang="fa"] .timeline-item::before {
 .timeline-divider {
     width: 100%;
     height: 1px;
-    background-color: #e1e1e1;
+    background-color: rgba(0,0,0,0.1);
     margin-bottom: 60px;
 }
 
@@ -815,7 +839,7 @@ html[lang="fa"] .timeline-item::before {
     display: flex;
     justify-content: space-around;
     gap: 20px;
-    flex-wrap: wrap; /* برای اینکه در موبایل زیر هم بیفتند */
+    flex-wrap: wrap;
 }
 
 .event-step-modern {
@@ -834,28 +858,35 @@ html[lang="fa"] .timeline-item::before {
     margin-bottom: 20px;
 }
 
+/* تنظیم دایره آیکون‌ها برای PNG های جدید */
 .event-icon-circle-modern {
-    width: 80px;
-    height: 80px;
-    border: 2px solid #e1e1e1;
+    width: 85px;
+    height: 85px;
+    border: 2px solid rgba(0,0,0,0.05);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease;
 }
 
+.event-icon-circle-modern:hover {
+    transform: scale(1.1); /* افکت جذاب روی آیکون‌ها */
+}
+
+/* استایل آیکون‌های PNG که آپلود کردی */
 .event-icon-circle-modern img {
-    width: 40px;
-    height: 40px;
+    width: 45px; /* سایز آیکون داخل دایره */
+    height: 45px;
     object-fit: contain;
 }
 
 .event-step-modern h4 {
     font-size: 0.95rem;
     color: #333;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
