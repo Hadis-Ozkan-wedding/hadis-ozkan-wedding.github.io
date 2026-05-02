@@ -141,7 +141,15 @@ section {
     letter-spacing: 0;
   }
 
-  /* hero */
+  /* hero - اضافه کردن لایه تیره برای موبایل */
+  .hero {
+    /* تکرار گرادینت تیره برای اطمینان از خوانایی در موبایل */
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url("images/hero.jpg") !important;
+    background-position: center center; /* تنظیم بهتر عکس در صفحه عمودی موبایل */
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -149,17 +157,24 @@ section {
   /* countdown */
   .countdown {
     gap: 10px;
+    margin-top: 20px; /* کمی فاصله کمتر برای جایگیری بهتر */
   }
 
   .countdown div {
-    min-width: 70px;
-    padding: 12px;
+    min-width: 65px; /* کمی کوچکتر برای جلوگیری از به هم ریختن چیدمان */
+    padding: 10px 5px;
+    background: rgba(0, 0, 0, 0.5); /* کمی تیره‌تر در موبایل برای کنتراست بیشتر */
+    border-radius: 12px;
   }
 
   .countdown span {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* سایز اعداد کمی متعادل‌تر */
   }
+
+  .countdown div::after {
+    font-size: 0.65rem; /* سایز برچسب‌های روز/ساعت/دقیقه */
   }
+}
 
 /* ================= بخش دعوتنامه (نسخه نهایی و ضد بریدگی) ================= */
 .invitation-section {
