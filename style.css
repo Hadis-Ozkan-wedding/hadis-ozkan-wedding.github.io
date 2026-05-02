@@ -1086,81 +1086,84 @@ html[lang="fa"] .timeline-item::before {
     color: white;
     border-color: #333;
 }
-/* بخش گالری */
+/* ================= بخش گالری مدرن ================= */
 .gallery-section-modern {
+    position: relative;
     padding: 100px 20px;
-    background-color: #fff; /* پس‌زمینه سفید برای تنوع با بخش قبلی */
     text-align: center;
-    border-top: 1px solid #eee;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* اضافه کردن بک‌گراند بلوری */
+.gallery-section-modern::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    background-image: url("images/gallery-bg.jpg"); /* 👈 نام عکس پس‌زمینه گالری */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* میزان کمرنگی عکس پس‌زمینه */
+    filter: blur(5px); /* میزان تاری */
+    z-index: 0;
 }
 
 .gallery-container {
-    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    max-width: 900px; /* کمی عریض‌تر برای جا شدن ۵ عکس */
     margin: 0 auto;
 }
 
-.gallery-subtitle {
-    font-family: Garamond, "Times New Roman", serif;
-    font-size: 1.5rem;
-    color: #f19a9a; /* رنگ تم */
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.gallery-description {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 40px;
-}
-
-/* قاب‌های دکوری */
+/* تنظیم ۵ باکس عکس */
 .gallery-preview {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 50px;
+    gap: 15px; /* فاصله بین باکس‌ها */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* برای اینکه در موبایل زیر هم بروند */
 }
 
 .preview-box {
-    width: 100px;
-    height: 120px;
-    background-color: #f9f9f9;
-    border: 1px dashed #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: #aaa;
+    width: 130px; /* اندازه باکس‌ها */
+    height: 150px;
+    background-color: #fff;
+    padding: 5px; /* ایجاد یک حاشیه سفید شبیه عکس‌های پولاروید */
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* پر کردن باکس بدون تغییر شکل عکس */
     border-radius: 5px;
-    transition: transform 0.3s ease;
 }
 
+/* افکت جذاب هنگام نگه داشتن موس */
 .preview-box:hover {
-    transform: scale(1.05);
-    border-color: #f19a9a;
+    transform: translateY(-10px) rotate(3deg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-/* دکمه آپلود */
+/* استایل دکمه آپلود */
 .upload-btn-modern {
+    position: relative;
+    z-index: 1;
     display: inline-block;
     background-color: #f19a9a;
     color: white;
     padding: 15px 40px;
-    font-size: 1.1rem;
-    text-decoration: none;
     border-radius: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(241, 154, 154, 0.4);
 }
 
 .upload-btn-modern:hover {
     background-color: #e08585;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(224, 133, 133, 0.5);
-    color: white;
+    transform: scale(1.05);
 }
 /* ================= تنظیمات اختصاصی نوار منو در موبایل ================= */
 
