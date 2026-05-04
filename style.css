@@ -276,7 +276,36 @@ section {
 .couple-card:hover {
   transform: translateY(-5px); /* افکت حرکت کوچک هنگام نگه داشتن موس */
 }
+/* کادر دور متن توضیحات عروس و داماد */
+.couple-bio-text { /* اسم این کلاس را طبق کد خودت چک کن، اگر فرق داشت عوضش کن */
+    padding: 30px;
+    border: 1px solid #1b4d3e; /* سبز تیره زمردی */
+    border-radius: 15px; /* گرد کردن ملایم لبه‌ها */
+    position: relative;
+    background-color: rgba(27, 77, 62, 0.03); /* یک هاله بسیار کمرنگ سبز در پس‌زمینه کادر */
+    margin: 20px 0;
+    transition: all 0.4s ease;
+}
 
+/* اضافه کردن یک خط دکوری کوچک برای قشنگ‌تر شدن (اختیاری) */
+.couple-bio-text::after {
+    content: "♥";
+    position: absolute;
+    bottom: -12px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #fff; /* یا رنگ پس‌زمینه اصلی */
+    padding: 0 10px;
+    color: #1b4d3e;
+    font-size: 1.2rem;
+}
+
+/* افکت ملایم وقتی موس روی کادر می‌رود */
+.couple-bio-text:hover {
+    border-color: #2e6b5a;
+    box-shadow: 0 5px 15px rgba(27, 77, 62, 0.1);
+    transform: translateY(-2px);
+}
 .couple-img {
   width: 160px;
   height: 160px;
