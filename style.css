@@ -1201,3 +1201,25 @@ html[lang="fa"] .timeline-item {
   text-align: right !important;
   direction: rtl;
 }
+/* ================= FOOTER (اصلاح شده) ================= */
+.site-footer {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.05); /* بسیار شفاف */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content p {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 1.1rem;
+    color: #444; /* رنگ متن رو یکم پررنگ‌تر کردم که خوانا باشه */
+    margin: 8px 0;
+    letter-spacing: 0.5px;
+}
+.footer-content p:last-child {
+    color: #f19a9a; /* همون رنگ صورتی تم سایتت */
+    font-weight: bold;
+}
