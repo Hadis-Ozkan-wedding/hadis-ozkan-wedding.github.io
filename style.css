@@ -991,8 +991,8 @@ html[lang="fa"] .timeline-item::before {
 
 /* عنوان RSVP بزرگ و با فاصله */
 .rsvp-card-modern .rsvp-title-alt {
-    font-family: Garamond, "Times New Roman", serif; /* فونت کلاسیک‌تر */
-    font-size: 5rem;
+    font-family: 'Great Vibes', cursive; /* هماهنگ با بقیه بخش‌ها */
+    font-size: 3.5rem;
     color: #333;
     letter-spacing: 15px; /* فاصله زیاد بین حروف طبق عکس */
     text-transform: uppercase;
