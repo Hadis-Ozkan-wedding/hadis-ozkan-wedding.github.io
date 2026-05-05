@@ -989,14 +989,27 @@ html[lang="fa"] .timeline-item::before {
     background-color: #e08888;
 }
 
-/* عنوان RSVP بزرگ و با فاصله */
 .rsvp-card-modern .rsvp-title-alt {
-    font-family: cursive, sans-serif;
-    font-size: 3rem;
-    color: #333;
-    letter-spacing: 15px; /* فاصله زیاد بین حروف طبق عکس */
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    /* استفاده از فونت استاندارد و خوانای فارسی */
+    font-family: 'Tahoma', sans-serif;
+    
+    /* اندازه فونت متناسب */
+    font-size: 2.2rem; 
+    
+    /* رنگ تیره و سنگین (خاکستری خیلی تیره نزدیک به مشکی) */
+    color: #333; 
+    
+    /* حذف فواصل اضافه که فارسی را به‌هم می‌ریخت */
+    letter-spacing: 0; 
+    
+    /* تنظیمات راست‌چین و تراز متن */
+    direction: rtl;
+    text-align: center;
+    font-weight: bold;
+    
+    /* حذف تنظیمات مخصوص انگلیسی */
+    text-transform: none; 
+    margin-bottom: 25px;
 }
 
 /* زیرنویس دعوت‌نامه */
